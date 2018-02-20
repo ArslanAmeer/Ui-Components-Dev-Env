@@ -1,0 +1,34 @@
+{
+  "name": "ui-components-dev-env",
+  "version": "1.0.0",
+  "description": "Ui Components Development Envoirnment ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArslanAmeer/Ui-Compononets-Dev-Env.git"
+  },
+  "author": "Arslan Ameer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArslanAmeer/Ui-Compononets-Dev-Env/issues"
+  },
+  "homepage": "https://github.com/ArslanAmeer/Ui-Compononets-Dev-Env#readme",
+  "dependencies": {
+    "npm-check-updates": "^2.14.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-less": "^3.5.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-glob": "^2.0.1"
+  }
+}
