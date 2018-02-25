@@ -1,4 +1,19 @@
-.box-size(@v){
+.box-size(@v) {
     height: @v;
     width: @v;
+}
+
+.button-borders(@l-clr, @d-clr) {
+    
+    border-left: 2px solid @l-clr;
+    border-top: 2px solid @l-clr;
+    border-right: 2px solid @d-clr;
+    border-bottom: 2px solid @d-clr;
+    
+    &:active {
+        border-left: 2px solid @d-clr;
+        border-top: 2px solid @d-clr;
+        border-right: 2px solid @l-clr;
+        border-bottom: 2px solid @l-clr;
+    }
 }

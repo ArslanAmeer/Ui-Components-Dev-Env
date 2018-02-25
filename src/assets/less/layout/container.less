@@ -1,19 +1,45 @@
 body{
     padding:0; margin: 0;
     background-color: @color-medium;
+    font-family: @primary-font;
+    font-size: 1.3rem;
 }
 
-
-.app-container{
-
-    background-color: @color-medium;
-    width: 80%;
+.container{
+    width: 100%;
+    margin: auto;
+    text-align: center;
     display: flex;
-    justify-content: space-around;
-
-    .box{
-        .box-size(100px);
-        background-color: @color-dark;
-    }
-
+    flex-flow: column nowrap;
+    text-align: center;
 }
+
+@media (min-width: 400px) {
+    .container{
+        width: 90%;
+    }
+}
+
+/* Larger than Phablet (Phone & Tablet) */
+@media (min-width: 550px) {
+    .container{
+        width: 80%;
+    }
+}
+
+/* Larger than Tablet */
+@media (min-width: 750px) {
+    .container{
+        width: 70%;
+    }
+}
+
+/* Larger than Desktop */
+@media (min-width: 1140px) {
+    .container{
+        width: 60%;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1280px) {}
