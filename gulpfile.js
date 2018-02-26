@@ -3,8 +3,9 @@ const less = require("gulp-less");
 const sourceMap = require("gulp-sourcemaps");
 const cleanCss = require("gulp-clean-css");
 const minHtml = require("gulp-htmlmin");
-const minJs = require("gulp-uglify");
+const minJs = require("gulp-uglify-es").default;
 const minImage = require("gulp-imagemin");
+const rename = require("gulp-rename")
 const lessAutoPrefix = require("less-plugin-autoprefix");
 const browserSync = require("browser-sync").create();
 
@@ -26,12 +27,17 @@ gulp.task("image-Minify", function(){
 
 gulp.task("Js-Minify", function(){
     gulp.src("src/assets/js/*.js")
+        .pipe(rename("mainscript.min.js"))
+        .pipe(sourceMap.init())
         .pipe(minJs())
+        .pipe(sourceMap.write('/maps'))
         .pipe(gulp.dest("dist/assets/js"))
+        .pipe(browserSync.stream());
 });
 
 gulp.task("less", function(){
     gulp.src("src/assets/less/main.less")
+        .pipe(rename("main.min.css"))
         .pipe(sourceMap.init())
         .pipe(less({
             plugins: [autoprefix, require('less-plugin-glob')]
@@ -48,6 +54,7 @@ gulp.task('serve', function(){
     browserSync.init({server: "dist"})
     gulp.watch("src/*.html",["html-Minify"]);
     gulp.watch("src/assets/images/*",["image-Minify"]);
+    gulp.watch("src/assets/js/*.js",["Js-Minify"]);
     gulp.watch("src/assets/less/**/*.less",["less"]);
     gulp.watch("dist/*.html").on("change", browserSync.reload);
 });
