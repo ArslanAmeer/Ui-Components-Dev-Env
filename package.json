@@ -26,8 +26,9 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.5.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.1",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-glob": "^2.0.1"
   }
