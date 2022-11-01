@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.9.2",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
