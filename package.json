@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ArslanAmeer/Ui-Compononets-Dev-Env#readme",
   "dependencies": {
-    "npm-check-updates": "^2.14.0"
+    "npm-check-updates": "^16.7.10"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
